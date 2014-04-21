@@ -493,11 +493,10 @@ ActiveRecord::Schema.define(:version => 20140406041115) do
   create_table "translations", :force => true do |t|
     t.integer  "translatable_id"
     t.string   "translatable_type"
-    t.string   "translatable_field"
-    t.string   "language"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
     t.hstore   "fields"
+    t.string   "language"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   add_index "translations", ["fields"], :name => "translations_gin_fields"
