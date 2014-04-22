@@ -25,7 +25,9 @@ class TranslationService
   end
 
   def self.can_translate?(translatable)
-    self.available? && translatable.language_field != I18n.locale.to_s
+    self.available? &&
+    translatable.language_field != nil &&
+    translatable.language_field != I18n.locale.to_s
   end
 
 end

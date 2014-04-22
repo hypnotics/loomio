@@ -14,7 +14,7 @@ module TranslationsHelper
               else
                 ''
               end
-    escape_javascript(message).html_safe
+    escape_javascript(message)
   end
 
   private
